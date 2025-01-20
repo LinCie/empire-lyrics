@@ -15,12 +15,19 @@ class Genius {
     try {
       const response = await this.genius.songs.search(URI);
       const song = response.shift();
+
+      if (!song) return null;
+
       return {
-        lyrics: await song?.lyrics(),
-        artist: song?.artist.name,
-        song: song?.title,
-        thumbnail: song?.thumbnail,
-        url: song?.url,
+        fullTitle: song.fullTitle,
+        title: song.title,
+        artist: song.artist.name,
+        artistLink: song.artist.url,
+        url: song.url,
+        lyrics: await song.lyrics(),
+        image: song.image,
+        thumbnail: song.thumbnail,
+        releasedAt: song.releasedAt,
       };
     } catch (error) {
       console.error("Error while fetching song:", error);
