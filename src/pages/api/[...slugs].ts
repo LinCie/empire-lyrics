@@ -8,8 +8,7 @@ const app = new Elysia({ prefix: "/api" })
     async ({ query }) => {
       const genius = new Genius();
       try {
-        const { song, lyrics } = await genius.searchSong(query.q);
-        return { song, lyrics };
+        return await genius.searchSong(query.q);
       } catch (error) {
         return null;
       }
