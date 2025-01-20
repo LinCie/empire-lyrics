@@ -11,8 +11,10 @@
   "dependencies": {
     "@astrojs/vercel": "^8.0.2",
     "astro": "^5.1.7",
+    "cheerio": "^1.0.0",
     "elysia": "^1.2.10",
-    "got": "^14.4.5"
+    "got": "^14.4.5",
+    "zenrows": "^2.0.1"
   },
   "devDependencies": {
     "@types/bun": "^1.1.17"
