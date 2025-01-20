@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.7"
+    "astro": "^5.1.7",
+    "elysia": "^1.2.10"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.17"
   }
 }
