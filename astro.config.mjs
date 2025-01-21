@@ -7,4 +7,5 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   output: "server",
   adapter: vercel(),
+  server: { port: Number(process.env.PORT) || 4321 },
 });
